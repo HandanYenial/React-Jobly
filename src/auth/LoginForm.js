@@ -21,6 +21,17 @@ function LoginForm({ login }){ //login is a function prop
         "formErrors=" ,formErrors,
     );
 
+    //handle form submission
+    async function handleSubmit(evt){
+        evt.preventDefault(); //prevent page reload
+        let result = await login(formData); //call login function prop
+        if(result.success){
+            navigate("/companies"); //redirect to companies page
+        } else {
+            setFormErrors(result.errors);
+        }
+    }
+
     //Update state on form changes
     function handleChange(evt){
         const { name, value } = evt.target;
@@ -34,14 +45,14 @@ function LoginForm({ login }){ //login is a function prop
 
                 <div className = "card">
                     < div className = "card-body">
-                        <form onSubmit = { handlesubmit }>
+                        <form onSubmit = { handleSubmit }>
                             <div className = "form-group">
                                 <label>Username</label>
                                 <input
                                       name = "username"
                                       className = "form-control"
                                       value = {formData.username}
-                                      onChange = {handlechange}
+                                      onChange = {handleChange}
                                       autoComplete = "username"
                                       required
                                 />
