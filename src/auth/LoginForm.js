@@ -33,9 +33,46 @@ function LoginForm({ login }){ //login is a function prop
                 <h3 className = "mb-3">Log In</h3>
 
                 <div className = "card">
-                    <
-                </div>
-        </div>
-    )
+                    < div className = "card-body">
+                        <form onSubmit = { handlesubmit }>
+                            <div className = "form-group">
+                                <label>Username</label>
+                                <input
+                                      name = "username"
+                                      className = "form-control"
+                                      value = {formData.username}
+                                      onChange = {handlechange}
+                                      autoComplete = "username"
+                                      required
+                                />
+                            </div>
+                            <div className = "form-group">
+                                <label> Password </label>
+                                <input
+                                      type = 'password'
+                                      name = "password"
+                                      className = "form-control"
+                                      value = {formData.password}
+                                      onChange = {handleChange}
+                                      autoComplete = "current-password"
+                                      required
+                                />
+                            </div>
 
+                            {formErrors.length
+                                ? <Alert type ="danger" messages = {formErrors} />
+                                : null
+                            }
+
+                            <button className="btn btn-primary float-right" onSubmit={handleSubmit}>Submit</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
+
+export default LoginForm;
+
