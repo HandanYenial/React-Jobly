@@ -32,9 +32,9 @@ function CompanyList(){
 
     return(
         <div className = "CompanyList col-md-8 offset-md-2">
-            <SearchForm serachFor = {search}/>
+            <SearchForm searchFor = {search}/>
             {companies.length
-                             ? (<div className= "CompanyList list">
+                             ? (<div className= "CompanyList-list">
                                     {companies.map(company =>(
                                         <CompanyCard
                                             key = {company.handle}

@@ -14,7 +14,7 @@ import LoadingSpinner from "../common/LoadingSpinner";
  */
 
 function CompanyDetail(){ 
-    const { handle } = useParams();
+    const { handle } = useParams();// get the handle from the URL
     console.debug("CompanyDetail" , "handle=", handle); 
 
     const [company , setCompany] = useState(null); 
