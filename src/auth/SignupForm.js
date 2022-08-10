@@ -1,5 +1,5 @@
-import React from "react";
-import { useState, useNavigate } from "react-router-dom";
+import React,{ useState } from "react";
+import {useHistory} from "react-router-dom";
 import Alert from "../common/Alert";
 
 /**Signup form for a new user
@@ -11,7 +11,7 @@ import Alert from "../common/Alert";
  */
 
 function SignupForm({ signup }){
-    const navigate = useNavigate();
+    const history = useHistory();
     const [formData, setFormData] = useState({username: "" , password: "", firstName:"" , lastName:"", email:""});
     const [formErrors, setFormErrors] = useState([]);
 
@@ -27,7 +27,7 @@ function SignupForm({ signup }){
         evt.preventDefault(); //prevent page reload
         let result = await signup(formData); //call signup function prop
         if(result.success){
-            navigate("/companies"); //redirect to companies page
+            history.push("/companies"); //redirect to companies page
         } else {
             setFormErrors(result.errors); 
         }

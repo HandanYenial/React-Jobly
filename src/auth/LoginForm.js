@@ -1,5 +1,5 @@
-import React from "react";
-import { useState, useNavigate } from "react-router-dom";
+import React , {useState} from "react";
+import { useHistory } from "react-router-dom";
 import Alert from "../common/Alert";
 
 //Login form for user login 
@@ -10,7 +10,7 @@ import Alert from "../common/Alert";
 //5. Redirect to companies page if the login is successful.
 
 function LoginForm({ login }){ //login is a function prop
-    const navigate = useNavigate(); //useNavigate hook to redirect
+    const history = useHistory(); 
     const [formData , setFormData] = useState({ username: "" , password: ""}); //initial state will be empty strings
     const[formErrors , setFormErrors] = useState([]); 
 
@@ -26,7 +26,7 @@ function LoginForm({ login }){ //login is a function prop
         evt.preventDefault(); //prevent page reload
         let result = await login(formData); //call login function prop
         if(result.success){
-            navigate("/companies"); //redirect to companies page
+            history.push("/companies"); //redirect to companies page
         } else {
             setFormErrors(result.errors);
         }

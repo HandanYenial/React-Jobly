@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Search from "../common/Search";
+import SearchForm from "../common/SearchForm";
 import JoblyApi from "../api/api";
 import JobCardList from "./JobCardList";
 import LoadingSpinner from "../common/LoadingSpinner";
@@ -36,7 +36,7 @@ function JobList(){
 
     return(
         <div className="JobList col-md-8 offset-md-2">
-            <Search searchFor={search}/>
+            <SearchForm searchFor={search}/>
             {jobs.length
                         ? <JobCardList jobs={jobs}/>
                         : <p className = "lead">Sorry, no results were found!</p>
