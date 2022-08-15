@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches with the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="alert alert-danger"
+    role="alert"
+  >
+    <p
+      class="mb-0 small"
+    >
+      danger
+    </p>
+    <p
+      class="mb-0 small"
+    >
+      Broken app
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches with the success snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="alert alert-success"
+    role="alert"
+  >
+    <p
+      class="mb-0 small"
+    >
+      success
+    </p>
+    <p
+      class="mb-0 small"
+    >
+      Awesome
+    </p>
+  </div>
+</DocumentFragment>
+`;

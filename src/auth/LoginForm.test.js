@@ -8,7 +8,9 @@ import { MemoryRouter } from "react-router-dom";
 //read or write to the address bar so the user can not use the browser's
 // back button as well as the forward button. It is used for testing
 //purposes.
-
+//Smoke test: A smoke test is a simple test that checks whether the
+//application is running or not.
+ 
 it ("renders without crashing", function(){
     render(<LoginForm/>);
 });
