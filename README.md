@@ -1,24 +1,24 @@
-#REACT-JOBLY
-Routes
-/
-Homepage — just a simple welcome message
+# REACT-JOBLY
+### Routes
+- /
+Homepage
 
-/companies
+- /companies
 List all 
 
-/companies/apple
+- /companies/apple
 View details of this 
 
-/jobs
+- /jobs
 List all 
 
-/login
-Login/
+- /login
+Login
 
-/signup
+- /signup
 Signup 
 
-/profile
+- /profile
 Edit profile page
 
 
