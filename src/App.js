@@ -9,7 +9,7 @@ import JoblyApi from "./api/api"; //a class that interacts with the Jobly API
 import UserContext from "./auth/UserContext"; //a context that stores the current user
 import jwt from "jsonwebtoken"; //a library that decodes a JWT
 
-import './App.css';
+
 
 //Key name for storing token in localStorage for "remember me" re-login
 export const TOKEN_STORAGE_ID = "jobly-token";
