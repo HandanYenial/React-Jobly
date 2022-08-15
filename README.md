@@ -1,3 +1,27 @@
+#REACT-JOBLY
+Routes
+/
+Homepage — just a simple welcome message
+
+/companies
+List all 
+
+/companies/apple
+View details of this 
+
+/jobs
+List all 
+
+/login
+Login/
+
+/signup
+Signup 
+
+/profile
+Edit profile page
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
