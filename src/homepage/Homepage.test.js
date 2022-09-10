@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { MemoryRouter } from "react-router";
-import Home from "./Homepage";
+import { MemoryRouter } from "react-router-dom";
+import Homepage from "./Homepage";
 import { UserProvider } from "../testUtils";
 
 
@@ -14,7 +14,7 @@ it("renders without crashing" , function(){
     render(
         <MemoryRouter>
             <UserProvider>
-                <Home/>
+                <Homepage/>
             </UserProvider>
         </MemoryRouter>
     );
@@ -24,7 +24,7 @@ it("matches snapshot" , function(){
     const { asFragment } = render(
         <MemoryRouter>
             <UserProvider>
-                <Home/>
+                <Homepage/>
             </UserProvider>
         </MemoryRouter>
     );
@@ -35,7 +35,7 @@ it("matches snapshot when logged out" , function(){
     const { asFragment } = render(
         <MemoryRouter>
             <UserProvider currentUser={null}>
-                <Home/>
+                <Homepage/>
             </UserProvider>
         </MemoryRouter>
     );
