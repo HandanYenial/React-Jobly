@@ -1,6 +1,6 @@
 /**Many of the components will need to talk to the backend (the company detail page will
  * need to load data about the company, for example).
-It will be messy and hard to debug if these components all had AJAX calls buried inside of them.
+It will be messy and hard to debug if these components all have AJAX calls buried inside of them.
 Instead, make a single JoblyAPI class, which will have helper methods for centralizing 
 this information. This is conceptually similar to having a model class to interact with the  
 database, instead of having SQL scattered all over your routes. */
@@ -10,15 +10,13 @@ import axios from "axios";
 const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
 
 /** API Class.
- *
- * Static class tying together methods used to get/send to to the API.
+ * Static class tying together methods used to get/send to the API.
  * There shouldn't be any frontend-specific stuff here, and there shouldn't
  * be any API-aware stuff elsewhere in the frontend.
- *
  */
 
 class JoblyApi {
-  //The token for interactive with the API will be stored here.
+  //The token for interaction with the API will be stored here.
   static token;
 
   static async request(endpoint, data = {}, method = "get") {
